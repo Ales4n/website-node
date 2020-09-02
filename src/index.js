@@ -11,9 +11,7 @@ app.set('view engine', 'ejs')
 //middlewares
 
 //routes
-app.get('/', (req, res) => {
-    res.render('index', { tittle: 'Website'})
-})
+app.use(require('./routes/index'))
 
 //Listenign the server
 app.listen(app.get('port'), ()  => {
